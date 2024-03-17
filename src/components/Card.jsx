@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/main.css";
 
-class CardComponent extends React.Component {
+class Card extends React.Component {
   render() {
     const profile = this.props;
 
@@ -17,4 +17,4 @@ class CardComponent extends React.Component {
   }
 }
 
-export default CardComponent;
+export default Card;

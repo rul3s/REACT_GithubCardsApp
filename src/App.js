@@ -1,9 +1,9 @@
 import logo from "./logo.svg";
 import "./App.css";
-import CardAppComponent from "./components/CardAppComponent.jsx";
+import CardApp from "./components/CardApp.jsx";
 
 function App() {
-  return <CardAppComponent title="Github Cards App" />;
+  return <CardApp title="Github Cards App" />;
 }
 
 export default App;

@@ -1,20 +1,20 @@
 import React from "react";
 import "../styles/main.css";
-import CardComponent from "./CardComponent";
+import Card from "./Card";
 
-const CardListComponent = (props) => {
+const CardList = (props) => {
   return (
     <div>
       {props.dataList.map((user) => (
-        // <CardComponent
+        // <Card
         //   name={user.name}
         //   avatar={user.avatar_url}
         //   company={user.company}
         // />
-        <CardComponent {...user} />
+        <Card {...user} />
       ))}
     </div>
   );
 };
 
-export default CardListComponent;
+export default CardList;

@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/main.css";
-import CardListComponent from "./CardListComponent";
+import CardList from "./CardList";
+import SearchAddForm from "./SearchAddForm";
 
 const testData = [
   {
@@ -20,19 +21,29 @@ const testData = [
   },
 ];
 
-class CardAppComponent extends React.Component {
+class CardApp extends React.Component {
   //constructor
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     profiles: testData,
+  //   };
+  // }
 
+  state = {
+    profiles: testData,
+  };
   //this
 
   render() {
     return (
       <div>
         <div className="header">{this.props.title}</div>
-        <CardListComponent dataList={testData} />
+        <SearchAddForm />
+        <CardList dataList={testData} />
       </div>
     );
   }
 }
 
-export default CardAppComponent;
+export default CardApp;
