@@ -1,8 +1,8 @@
 import React from "react";
-import "../styles/main.css";
+import "../../styles/main.css";
 import axios from "axios";
 
-class SearchAddForm extends React.Component {
+class AddForm extends React.Component {
   state = { userName: "" };
   handleSubmit = async (event) => {
     event.preventDefault();
@@ -31,4 +31,4 @@ class SearchAddForm extends React.Component {
   }
 }
 
-export default SearchAddForm;
+export default AddForm;

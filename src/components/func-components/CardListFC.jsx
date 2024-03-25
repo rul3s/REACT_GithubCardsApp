@@ -1,8 +1,8 @@
 import React from "react";
-import "../styles/main.css";
-import Card from "./Card";
+import "../../styles/main.css";
+import CardFC from "./CardFC";
 
-const CardList = (props) => {
+const CardListFC = (props) => {
   return (
     <div>
       {props.dataList.map((user) => (
@@ -11,10 +11,10 @@ const CardList = (props) => {
         //   avatar={user.avatar_url}
         //   company={user.company}
         // />
-        <Card key={user.id} {...user} />
+        <CardFC key={user.id} {...user} />
       ))}
     </div>
   );
 };
 
-export default CardList;
+export default CardListFC;

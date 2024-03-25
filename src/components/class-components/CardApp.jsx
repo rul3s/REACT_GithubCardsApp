@@ -1,7 +1,15 @@
 import React from "react";
-import "../styles/main.css";
+import "../../styles/main.css";
 import CardList from "./CardList";
-import SearchAddForm from "./SearchAddForm";
+import AddForm from "./AddForm";
+
+/*
+ToDo: Handle errors when
+1) username not properly written
+2) user not found
+3) netowrk problems
+4) delay too much
+*/
 
 const usersData = [
   {
@@ -36,7 +44,7 @@ class CardApp extends React.Component {
     return (
       <div>
         <div className="header">{this.props.title}</div>
-        <SearchAddForm addUser={this.addUserData} />
+        <AddForm addUser={this.addUserData} />
         <CardList dataList={this.state.profiles} />
       </div>
     );
