@@ -1,13 +1,17 @@
 import React from "react";
 import "../styles/main.css";
+import axios from "axios";
 
 class SearchAddForm extends React.Component {
   //userNameInput = React.createRef();
 
   state = { userName: "" };
-  handleSubmit = (event) => {
+  handleSubmit = async (event) => {
     event.preventDefault();
-    console.log(this.state.userName);
+    const resp = await axios.get(
+      `https://api.github.com/users/${this.state.userName}`
+    );
+    console.log(resp);
   };
 
   render() {
