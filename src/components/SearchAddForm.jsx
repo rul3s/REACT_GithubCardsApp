@@ -3,15 +3,16 @@ import "../styles/main.css";
 import axios from "axios";
 
 class SearchAddForm extends React.Component {
-  //userNameInput = React.createRef();
-
   state = { userName: "" };
   handleSubmit = async (event) => {
     event.preventDefault();
     const resp = await axios.get(
       `https://api.github.com/users/${this.state.userName}`
     );
-    console.log(resp);
+    this.props.addUser(resp.data);
+    this.setState(() => ({
+      userName: "",
+    }));
   };
 
   render() {
@@ -23,7 +24,6 @@ class SearchAddForm extends React.Component {
           onChange={(event) => this.setState({ userName: event.target.value })}
           placeholder="GitHub username"
           required
-          //ref={this.userNameInput}
         />
         <button>Add card</button>
       </form>
