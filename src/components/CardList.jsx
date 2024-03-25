@@ -11,7 +11,7 @@ const CardList = (props) => {
         //   avatar={user.avatar_url}
         //   company={user.company}
         // />
-        <Card {...user} />
+        <Card key={user.id} {...user} />
       ))}
     </div>
   );
