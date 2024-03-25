@@ -2,10 +2,12 @@ import React from "react";
 import "../styles/main.css";
 
 class SearchAddForm extends React.Component {
-  userNameInput = React.createRef();
+  //userNameInput = React.createRef();
+
+  state = { userName: "" };
   handleSubmit = (event) => {
     event.preventDefault();
-    console.log(this.userNameInput.current.value);
+    console.log(this.state.userName);
   };
 
   render() {
@@ -13,9 +15,11 @@ class SearchAddForm extends React.Component {
       <form onSubmit={this.handleSubmit}>
         <input
           type="text"
+          value={this.state.userName}
+          onChange={(event) => this.setState({ userName: event.target.value })}
           placeholder="GitHub username"
           required
-          ref={this.userNameInput}
+          //ref={this.userNameInput}
         />
         <button>Add card</button>
       </form>
